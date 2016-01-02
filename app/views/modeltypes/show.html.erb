@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @modeltype.name %>
+</p>
+
+<p>
+  <strong>Model type slug:</strong>
+  <%= @modeltype.model_type_slug %>
+</p>
+
+<p>
+  <strong>Model type code:</strong>
+  <%= @modeltype.model_type_code %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @modeltype.integer %>
+</p>
+
+<p>
+  <strong>Base price:</strong>
+  <%= @modeltype.base_price %>
+</p>
+
+<%= link_to 'Edit', edit_modeltype_path(@modeltype) %> |
+<%= link_to 'Back', modeltypes_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Modeltypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model type slug</th>
+      <th>Model type code</th>
+      <th>Integer</th>
+      <th>Base price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modeltypes.each do |modeltype| %>
+      <tr>
+        <td><%= modeltype.name %></td>
+        <td><%= modeltype.model_type_slug %></td>
+        <td><%= modeltype.model_type_code %></td>
+        <td><%= modeltype.integer %></td>
+        <td><%= modeltype.base_price %></td>
+        <td><%= link_to 'Show', modeltype %></td>
+        <td><%= link_to 'Edit', edit_modeltype_path(modeltype) %></td>
+        <td><%= link_to 'Destroy', modeltype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modeltype', new_modeltype_path %>
