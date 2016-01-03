@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :model_id %><br>
+    <%= f.number_field :model_id %>
+  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -22,10 +25,6 @@
   <div class="field">
     <%= f.label :model_type_code %><br>
     <%= f.text_field :model_type_code %>
-  </div>
-  <div class="field">
-    <%= f.label :integer %><br>
-    <%= f.text_field :integer %>
   </div>
   <div class="field">
     <%= f.label :base_price %><br>
