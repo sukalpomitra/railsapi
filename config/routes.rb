@@ -1,7 +1,27 @@
 Rails.application.routes.draw do
-  resources :modeltypes
-  resources :models
-  resources :organizations
+  #resources :modeltypes
+  #resources :models
+  #resources :organizations do
+    #resources :models do
+      #resources :modeltypes
+    #end
+  #end
+  
+  scope '/models' do
+    scope '/:model_slug' do
+
+      scope '/model_types' do
+        get '/' => 'modeltypes#index'
+      end
+      scope '/model_types_price' do
+        scope '/:model_type_slug' do
+          post '/' => 'modeltypes#show'
+        end
+      end
+
+    end
+  end
+      
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
